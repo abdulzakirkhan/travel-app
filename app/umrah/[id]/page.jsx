@@ -9,7 +9,7 @@ const CardDetailsPage = () => {
   
   const card = umrahData.find((item) => item.id === Number(id));
 
-  console.log("card", card);
+  
 
   return (
     <>

@@ -3,7 +3,7 @@ import React from "react";
 const CardDetails = ({card}) => {
   
 
-  console.log("card", card);
+ 
 
   return (
     <>

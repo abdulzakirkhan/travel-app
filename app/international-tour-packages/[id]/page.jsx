@@ -8,7 +8,7 @@ const CardDetailsPage = () => {
   
   const card = tourPackages.find((item) => item.id === Number(id));
 
-  console.log("card", card);
+ 
 
   return (
     <>

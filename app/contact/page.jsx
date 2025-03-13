@@ -43,7 +43,7 @@ const ContactPage = () => {
         },
         validationSchema,
         onSubmit: (values) => {
-          console.log(values);
+          
         },
       });
   return (

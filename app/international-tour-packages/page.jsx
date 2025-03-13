@@ -4,7 +4,7 @@ import { tourPackages } from '@/app/data'
 import React from 'react'
 const internationalTourPackages = () => {
       const firstInedx=tourPackages[0]
-      console.log("First Card",firstInedx)
+      
   return (
     <div className="container mx-auto px-6 py-8">
       <div className="">
