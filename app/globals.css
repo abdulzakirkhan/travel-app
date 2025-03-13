@@ -1,3 +1,6 @@
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +21,102 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-border {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Top & Bottom Borders (Before) */
+.custom-border::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transition: transform 0.4s ease-in-out;
+  transform: scale(0, 1);
+}
+
+/* Left & Right Borders (After) */
+.custom-border::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  bottom: 30px;
+  left: 50px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transition: transform 0.4s ease-in-out;
+  transform: scale(1, 0);
+}
+
+/* Hover Effect */
+.group:hover .custom-border::before {
+  transform: scale(1, 1); /* Expands top & bottom borders */
+}
+
+.group:hover .custom-border::after {
+  transform: scale(1, 1); /* Expands left & right borders */
+}
+
+
+
+.fs-42{
+  font-size: 65px;
+  color: grey;
+}
+.fs-40{
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #0e85c4;
+}
+.mt{
+  margin-top: -4rem !important;
+
+}
+.fs-30{
+  font-size: 22px !important;
+}
+
+
+.shadow-cust:hover{
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.duration-12{
+  transition-duration: 1500ms;
+}
+
+.para{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 5px;
+  line-height: 1.5em;
+}
+
+.w-h{
+  width: 40px !important;
+  height: 40px;
+}
+
+.hlocations{
+  width: 50px !important;
+}
+
+@media (max-width:530px) {
+  .in{
+    width: 100% !important;
+  }
 }
