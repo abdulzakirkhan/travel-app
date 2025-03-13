@@ -119,13 +119,13 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div className={`md:hidden ${isOpen ? "" : "hidden"}`}>
-            <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3">
+            <div className="px-2 pt-2 pb-3 sm:px-3">
             <Link href="/" className={` ${pathname === "/" ? "text-red-700 border-b-2 border-b-red-700":"text-gray-700"} hover:text-red-600`}>
               <span className="block">Home</span>
             </Link>
 
               {/* Visa Dropdown - Open on Hover */}
-              <div className="relative group">
+              <div className="relative py-3 group">
                 <button className="text-gray-700 hover:text-red-600 focus:outline-none">
                   Visa
                 </button>
@@ -139,21 +139,25 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link href="/international-tour-packages" className={` ${pathname === "/international-tour-packages" ?  "text-red-700":"text-gray-700"} text-base hover:text-red-600`}>
-                <span className="block">TOUR PACKAGES</span>
-              </Link>
-              <Link href="/honeymoon-packages-from-pakistan" className={` ${pathname === "/honeymoon-packages-from-pakistan" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
-                <span className="block">HONEYMOONERS</span>
-              </Link>
-              <Link href="/new-year-packages"  className={`${pathname === "/new-year-packages" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
-                <span className="block"> NEW YEAR PACKAGES</span>
-              </Link>
-              <Link href="/hajj" className={` ${pathname === "/hajj" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
-                <span className="block"> HAJJ</span>
-              </Link>
-              <Link href="/umrah" className={` ${pathname === "/umrah" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
-                <span className="block"> UMRAH</span>
-              </Link>
+
+              <div className="flex flex-col space-y-3">
+                <Link href="/international-tour-packages" className={`${pathname === "/international-tour-packages" ?  "text-red-700":"text-gray-700"} text-base hover:text-red-600`}>
+                  <span className="block">TOUR PACKAGES</span>
+                </Link>
+                <Link href="/honeymoon-packages-from-pakistan" className={` ${pathname === "/honeymoon-packages-from-pakistan" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
+                  <span className="block">HONEYMOONERS</span>
+                </Link>
+                <Link href="/new-year-packages"  className={`${pathname === "/new-year-packages" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
+                  <span className="block"> NEW YEAR PACKAGES</span>
+                </Link>
+                <Link href="/hajj" className={` ${pathname === "/hajj" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
+                  <span className="block"> HAJJ</span>
+                </Link>
+                <Link href="/umrah" className={` ${pathname === "/umrah" ? "text-red-700":"text-gray-700"}  text-base hover:text-red-600`}>
+                  <span className="block"> UMRAH</span>
+                </Link>
+
+              </div>
             </div>
           </div>
         </div>
